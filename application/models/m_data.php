@@ -1,26 +1,24 @@
 <?php
-class M_data extends CI_Model{
-
-  function input_data($data,$table) {
+class M_data extends CI_Model {
+  function input_data($data,$table){
     $this->db->insert($table,$data);
-
   }
 
   function tampil_data() {
     return $this->db->get('mahasiswa');
   }
-  
-  function get_data_by_id($id) {
-    return $this->db->get_where('mahasiswa', array('id' => $id))->row();
+
+  function edit_data($where, $table) {
+    return $this->db->get_where($table, $where);
   }
 
-  function update_data($id, $data) {
-    $this->db->where('id', $id);
-    $this->db->update('mahasiswa', $data);
+  function update_data($where,$data,$table) {
+    $this->db->where($where);
+    $this->db->update($table,$data);
   }
 
-  function delete_data($id) {
-    $this->db->where('id', $id);
-    $this->db->delete('mahasiswa');
+  function hapus_data($where,$table) {
+    $this->db->where($where);
+    $this->db->delete($table);
   }
 }

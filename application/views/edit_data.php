@@ -4,8 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Edit Data</title>
+
+  <!-- My Style -->
+  <link rel="stylesheet" href="<?= base_url('assets/'); ?>css/input_data.css" />
 </head>
 <body>
+  <div class="container">
   <center>
     <h1>Edit Data Mahasiswa</h1>
   </center>
@@ -15,26 +19,26 @@
       <tr>
         <td>NIM</td>
         <td>
-          <input type="hidden" name="id" value="<?php echo $u->id ?>">
-          <input type="text" name="nim" value="<?php echo $u->nim ?>">
+          <input type="hidden" name="id" value="<?php echo $u->id ?>" class="inp">
+          <input type="text" name="nim" value="<?php echo $u->nim ?>" class="inp">
         </td>
       </tr>
       <tr>
         <td>Nama</td>
         <td>
-          <input type="text" name="nama" value="<?php echo $u->nama ?>">
+          <input type="text" name="nama" value="<?php echo $u->nama ?>" class="inp">
         </td>
       </tr>
       <tr>
         <td>Alamat</td>
         <td>
-          <input type="text" name="alamat" value="<?php echo $u->alamat ?>">
+          <input type="text" name="alamat" value="<?php echo $u->alamat ?>" class="inp">
         </td>
       </tr>
       <tr>
         <td>Pekerjaan</td>
         <td>
-          <input type="text" name="pekerjaan" value="<?php echo $u->pekerjaan ?>">
+          <input type="text" name="pekerjaan" value="<?php echo $u->pekerjaan ?>" class="inp">
         </td>
       </tr>
       <tr>
@@ -46,10 +50,17 @@
       </tr>
       <tr>
         <td></td>
-        <td><input type="submit" value="update"> <?php echo anchor('kampus', '<input type=button value=kembali>'); ?></td>
+        <td>
+          <div class="button">
+            <input type="submit" value="Update" class="btn">
+            <?php echo anchor('kampus', '<input type=button value="Kembali" class="btn">'); ?>
+          </div>
+        </td>
       </tr>
     </table>
   </form>  
   <?php } ?>
+
+  </div>
 </body>
 </html>

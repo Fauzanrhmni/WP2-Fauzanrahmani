@@ -53,8 +53,8 @@
 				<?php } ?>
 			</table>
 			<center>
-				<?php echo anchor ('kampus/tambah', '<input type=button value=\'Tambah Data\' class="cta"> ');
-				?>
+				<?php echo anchor ('kampus/tambah', '<input type=button value=\'Tambah Data\' class="cta"> ');?>
+				<?php echo anchor ('login/logout', '<input type=button value=\'Logout\' class="cta"> ');?>
 			</center>
 		</div>
 
